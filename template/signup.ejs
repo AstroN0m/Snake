@@ -1,0 +1,40 @@
+<% layout('layout/page') -%>
+<% block('title', "Sign up") -%>
+
+<div ng-controller="LoginController">
+    <p>Enter login and password</p>
+
+    <form class="form-horizontal login-form" name="login-form" ng-submit="signup()">
+        <div class="form-group">
+            <label for="input-username" class="col-lg-2 control-label">Login</label>
+
+            <div class="col-lg-10">
+                <input name="username" type="text"  ng-model="userData.username" class="form-control" id="input-username" placeholder="Name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="input-password" class="col-lg-2 control-label">Password</label>
+
+            <div class="col-lg-10">
+                <input name="password" type="password" ng-model="userData.password" class="form-control" id="input-password" placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="input-color" class="col-lg-2 control-label">Color</label>
+
+            <div class="col-lg-10">
+                <select name="color" id="input-color" ng-model="userData.color" style="background: {{ userData.color }}" >
+                    <option ng-repeat="color in colors" value="{{ color }}" style="background: {{ color }}; color: #000;"> {{ color }} </option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-offset-2 col-lg-10">
+                <button type="submit" class="btn btn-primary" data-loading-text="Loading...">Sign up</button>
+                <span class="help-block error"></span>
+            </div>
+        </div>
+
+        <div class="status"></div>
+    </form>
+</div>

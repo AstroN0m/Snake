@@ -1,0 +1,26 @@
+{
+  "port": "3000",
+  "origin": {
+    "url": "localhost:*",
+    "port": "*"
+  },
+  "mongoose": {
+    "uri": "mongodb://dbuser:dbpassword@ds041218.mongolab.com:41218/snake",
+    "options": {
+      "server": {
+        "socketOptions": {
+          "keepAlive": 1
+        }
+      }
+    }
+  },
+  "session": {
+    "secret": "KillerIsJim",
+    "name": "sid",
+    "cookie": {
+      "path": "/",
+      "httpOnly": true,
+      "maxAge": null
+    }
+  }
+}

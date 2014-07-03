@@ -1,0 +1,22 @@
+#input-color {
+    height: 34px;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.navbar-nav.navbar-right:last-child {
+	margin-right: 0px; /* why does bootstrap have -15px here?!*/
+}
+
+.preview {
+    background: url('/img/preview.jpg');
+    margin: 30px auto;
+    width: 685px;
+    height: 400px;
+}
+.error {
+    font-size: 80%;
+    font-style: italic;
+    color: #F00;
+}

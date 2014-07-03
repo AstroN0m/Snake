@@ -1,0 +1,18 @@
+<div ng-controller="LoginController">
+    <nav class="navbar navbar-default" role="navigation">
+        <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <% if (user) { %>
+            <li><a href="/game">Play</a></li>
+            <% } %>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <% if (user) { %>
+            <li><a href="" id='LogOut' ng-click="logout()">Log out</a></li>
+            <% } else { %>
+            <li><a href="/login">Log in</a></li>
+            <li><a href="/signup">Sign up</a></li>
+            <% } %>
+        </ul>
+    </nav>
+</div>

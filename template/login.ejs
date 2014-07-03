@@ -1,0 +1,33 @@
+<% layout('layout/page') -%>
+<% block('title', "Log in") -%>
+
+<div ng-controller="LoginController">
+    <p>Enter Login and Password</p>
+
+    <form class="form-horizontal login-form" method="post" name="login-form" ng-submit="login()">
+        <div class="form-group">
+            <label for="input-username" class="col-lg-2 control-label">Login</label>
+
+            <div class="col-lg-10">
+                <input name="username" type="text" ng-model="userData.username" class="form-control" id="input-username" placeholder="Login">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="input-password" class="col-lg-2 control-label">Password</label>
+
+            <div class="col-lg-10">
+                <input name="password" type="password" ng-model="userData.password" class="form-control" id="input-password" placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-offset-2 col-lg-10">
+                <button type="submit" class="btn btn-primary" data-loading-text="Loading...">Log In</button>
+                <span class="help-block error"></span>
+            </div>
+        </div>
+
+        <div class="status">{{message}}</div>
+    </form>
+</div>
+
+

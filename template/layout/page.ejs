@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= blocks.title %></title>
+
+    <link rel="stylesheet" href="/vendor/bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/css/app.css"/>
+
+    <script src="/vendor/bower_components/angular/angular.min.js"></script>
+    <script src="/vendor/bower_components/socket.io-client/dist/socket.io.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/game/game.js"></script>
+    <script src="/js/services/socket.js"></script>
+    <script src="/js/controllers/loginController.js"></script>
+    <script src="/js/controllers/gameController.js"></script>
+</head>
+
+<body ng-app="Game">
+<header>
+    <%- blocks.header %>
+</header>
+<section class="container">
+
+    <%- partial('../partials/topNavigation') %>
+
+    <h1><%= blocks.title %></h1>
+
+    <%- body -%>
+</section>
+<footer>
+    <%- blocks.footer %>
+</footer>
+</body>
+</html>
